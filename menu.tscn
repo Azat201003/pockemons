@@ -1,4 +1,23 @@
-[gd_scene format=3 uid="uid://cgyd0dn0r5jwq"]
+[gd_scene load_steps=7 format=3 uid="uid://cgyd0dn0r5jwq"]
+
+[ext_resource type="Theme" uid="uid://dvmwta38busw" path="res://border_radius.tres" id="1_qqo3w"]
+[ext_resource type="FontFile" path="/" id="1_yuen8"]
+[ext_resource type="FontFile" uid="uid://bipck52ue4bg2" path="res://Podkova-VariableFont_wght.ttf" id="3_sjwdg"]
+
+[sub_resource type="Theme" id="Theme_kmo8c"]
+default_font = ExtResource("1_yuen8")
+
+[sub_resource type="LabelSettings" id="LabelSettings_hqnhy"]
+font = ExtResource("3_sjwdg")
+font_size = 64
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.337255)
+
+[sub_resource type="LabelSettings" id="LabelSettings_35kpu"]
+font = ExtResource("3_sjwdg")
+font_size = 64
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.337255)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -7,101 +26,105 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_kmo8c")
 
-[node name="Control" type="Control" parent="."]
+[node name="Конфигуратор" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -183.0
-offset_top = -169.0
-offset_right = 183.0
-offset_bottom = 170.0
+offset_left = -450.0
+offset_top = 86.0
+offset_right = 450.0
+offset_bottom = 682.0
 grow_horizontal = 2
-grow_vertical = 2
+theme = ExtResource("1_qqo3w")
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="заливка" type="ColorRect" parent="Конфигуратор"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.4, 0.298039, 0.235294, 1)
+theme = ExtResource("1_qqo3w")
+color = Color(0.968627, 0.709804, 0.54902, 1)
 
-[node name="Control" type="Control" parent="Control"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = 55.0
-grow_horizontal = 2
-
-[node name="SpinBox" type="SpinBox" parent="Control/Control"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -83.0625
-offset_top = -15.5
-offset_bottom = 15.5
-grow_horizontal = 0
-grow_vertical = 2
-min_value = 2.0
-value = 2.0
-
-[node name="Label" type="Label" parent="Control/Control"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -11.5
-offset_right = 133.0
-offset_bottom = 11.5
-grow_vertical = 2
-text = "кол-во игроков: "
-
-[node name="Control2" type="Control" parent="Control"]
+[node name="Игроки" type="Control" parent="Конфигуратор"]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 10.0
-offset_top = -22.5
-offset_right = -10.0
-offset_bottom = 22.5
+offset_left = 194.0
+offset_top = -265.0
+offset_right = -195.0
+offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SpinBox" type="SpinBox" parent="Control/Control2"]
+[node name="Label" type="Label" parent="Конфигуратор/Игроки"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -35.5
+offset_right = 470.0
+offset_bottom = 35.5
+grow_vertical = 2
+text = "кол-во игроков: "
+label_settings = SubResource("LabelSettings_hqnhy")
+
+[node name="SpinBox" type="SpinBox" parent="Конфигуратор/Игроки"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -83.0625
-offset_top = -15.5
-offset_bottom = 15.5
+offset_left = -288.0
+offset_top = 52.0
+offset_right = -204.938
+offset_bottom = 83.0
 grow_horizontal = 0
 grow_vertical = 2
 min_value = 2.0
 value = 2.0
 
-[node name="Label" type="Label" parent="Control/Control2"]
+[node name="Карты" type="Control" parent="Конфигуратор"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 270.0
+offset_top = 277.0
+offset_right = -270.0
+offset_bottom = 477.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Конфигуратор/Карты"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -11.5
-offset_right = 133.0
-offset_bottom = 11.5
+offset_top = -35.5
+offset_right = 368.0
+offset_bottom = 35.5
 grow_vertical = 2
-text = "кол-во игроков: "
+text = "кол-во карт: "
+label_settings = SubResource("LabelSettings_35kpu")
+
+[node name="SpinBox" type="SpinBox" parent="Конфигуратор/Карты"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = 77.0
+offset_right = -117.938
+offset_bottom = 108.0
+grow_horizontal = 0
+grow_vertical = 2
+min_value = 2.0
+value = 2.0

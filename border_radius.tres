@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dvmwta38busw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8jhu"]
+corner_radius_top_left = 40
+corner_radius_top_right = 90
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 65
+
+[resource]
+/styles/border_radius = SubResource("StyleBoxFlat_r8jhu")
