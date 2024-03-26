@@ -1,15 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgyd0dn0r5jwq"]
+[gd_scene load_steps=6 format=3 uid="uid://cgyd0dn0r5jwq"]
 
 [ext_resource type="Theme" uid="uid://dvmwta38busw" path="res://border_radius.tres" id="1_qqo3w"]
-[ext_resource type="FontFile" path="/" id="1_yuen8"]
 [ext_resource type="FontFile" uid="uid://bipck52ue4bg2" path="res://Podkova-VariableFont_wght.ttf" id="3_sjwdg"]
 
 [sub_resource type="Theme" id="Theme_kmo8c"]
-default_font = ExtResource("1_yuen8")
 
 [sub_resource type="LabelSettings" id="LabelSettings_hqnhy"]
 font = ExtResource("3_sjwdg")
 font_size = 64
+outline_color = Color(0, 0, 0, 1)
 shadow_size = 2
 shadow_color = Color(0, 0, 0, 0.337255)
 
@@ -68,11 +67,12 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -35.5
-offset_right = 470.0
-offset_bottom = 35.5
+offset_left = 20.0
+offset_top = -63.0
+offset_right = 496.0
+offset_bottom = 8.0
 grow_vertical = 2
-text = "кол-во игроков: "
+text = "Кол-во игроков: "
 label_settings = SubResource("LabelSettings_hqnhy")
 
 [node name="SpinBox" type="SpinBox" parent="Конфигуратор/Игроки"]
@@ -110,7 +110,7 @@ offset_top = -35.5
 offset_right = 368.0
 offset_bottom = 35.5
 grow_vertical = 2
-text = "кол-во карт: "
+text = "Кол-во карт: "
 label_settings = SubResource("LabelSettings_35kpu")
 
 [node name="SpinBox" type="SpinBox" parent="Конфигуратор/Карты"]
